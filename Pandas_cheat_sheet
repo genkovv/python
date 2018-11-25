@@ -15,7 +15,7 @@ df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where sep
 
 
 ---------------
-df[["column_name]] - list only one colymn 
+df[["column_name]] - list only one column 
 df.shape - will show number of rows [0] and colums [1]
 df.info - will list the name and number of columns, number of rows  
 df.rename(columns={"A":"a"}) - renames columns "A" with "a"
