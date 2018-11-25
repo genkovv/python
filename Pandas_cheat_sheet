@@ -15,15 +15,17 @@ df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where sep
 
 
 ---------------
-df[["column_name]] - list only one column 
+df[["column_name]] - list only one colymn 
 df.shape - will show number of rows [0] and colums [1]
 df.info - will list the name and number of columns, number of rows  
 df.rename(columns={"A":"a"}) - renames columns "A" with "a"
 df1=df.loc[((df["column1"]<=17)&(auto3["column1"]>=13))]  -  lists values in column1 which are between or eaqual to 13 =><=17
 df.loc[df["column1]=="NaN"]="0" - Changes the cells which contain NaN to 0
-df.loc[df['column1'] > 50, "column1"] = 1 - change the values of the cells in columns1 where existing value is > 50
+df.loc[df['First Season'] > 1990, 'First Season'] = 1
 df["column1"]=df["column1"].replace(["?"],"NA")  - replaces string "?" with NA in column "column1"
 df1=df.iloc[0:10]  - creating new df1 with all columns and 10 rows
 df1=df.iloc[0:10,0:10]  - creating new df1 with all columns and 10 rows
 df3=pd.merge(df1,df2[["col-name","colname5","colname7"]],on="col-name",how="left")  - VLOOKUP equivalent (column) both df need to have identical "col-name" column
 df=df.rename({"oldname_col":"newname_col"},axis="columns") - rename column 
+df[df["column-name"].str.contains("tch")]   - list all columns where string includes "tch" in column "column-name"
+df1=df[df["body-style"].str.match("^ha.*p$")] - using regular expression
