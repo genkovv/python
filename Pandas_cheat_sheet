@@ -10,7 +10,7 @@ pd.set_option('display.max_columns',None) - clear column limit
 pd.describe_option() -  offline documentation  
 pd.reset_option('all') - reset all options
 ----------------
-df=pd.read_excel(C/path/to/file.xlsx")
+df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where separator is "|"
 
 
