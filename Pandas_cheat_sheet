@@ -1,3 +1,5 @@
+import pandas as pd
+import numpy as np
 import warnings
 warnings.filterwarnings('ignore') - clears all warnings
 
@@ -13,9 +15,14 @@ pd.reset_option('all') - reset all options
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where separator is "|"
 
+----
 
+df.columns = df.columns.str.replace(' ', '')   - remove spaces in columns
+df.columns = df.columns.str.lstrip() -  To remove white space at the beginning of string
+df.columns = df.columns.str.rstrip() - 
+df.rename(columns={"hp":"bhp"},inplace=True) - rename column hp to bhp
 ---------------
-df[["column_name]] - list only one colymn 
+df[["column_name"]] - list only one column 
 df.shape - will show number of rows [0] and colums [1]
 df.info - will list the name and number of columns, number of rows  
 df.rename(columns={"A":"a"}) - renames columns "A" with "a"
