@@ -15,7 +15,7 @@ pd.reset_option('all') - reset all options
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where separator is "|"
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
-http://datashine.org.uk
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
@@ -32,7 +32,6 @@ df[df.column-name.str.contains("F[AE]LL.*BI[KC]")] - filter column based on regu
 
 df.shape - will show number of rows [0] and colums [1]
 df.info                                                      - will list the name and number of columns, number of rows  
-
 df = df.reset_index() - re-create the index after small dataframe is cut from large
 del df['index']      - delete column "index"
 ------------------------------------------------------------------------------------------------------------------------------
