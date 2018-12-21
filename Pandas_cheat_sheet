@@ -54,5 +54,7 @@ df.row.str.extract('(?P<fips>\d{5})((?P<state>[A-Z ]*$)|(?P<county>.*?), (?P<sta
 df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression 
 ------------------------------------------------------------------------------------------------------------------------------
 List:
+
 df["bhp"].unique() - List unique values in a column
+list.reverse() - reversed the list
 
