@@ -26,7 +26,7 @@ writer.save()
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
-
+df.sort_values(by="car", ascending=True)   - Sort column "car" from A-Z
 df[["column_name"]] - list only one column 
 df.rename(columns={"A":"a"}) - renames columns "A" with "a"
 df["column"] = df["column"].replace(r"\ ","",regex=True)     - remove spaces in columns
