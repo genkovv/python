@@ -30,6 +30,7 @@ df[1].fillna(0, inplace=True)  - Replace Nan with 0
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
+df[["column1,column2"]]  - list two columns
 df.sort_values(by="car", ascending=True)   - Sort column "car" from A-Z
 df[["column_name"]] - list only one column 
 df.rename(columns={"A":"a"}) - renames columns "A" with "a"
