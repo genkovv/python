@@ -70,3 +70,11 @@ List:
 df["bhp"].unique() - List unique values in a column
 list.reverse() - reversed the list
 
+------------------------------------------------------------------------------------------------------------------------------
+Convert rows from dataset in a content in list
+------------------------------------------------------------------------------------------------------------------------------
+temp=[]
+
+for row in lottopd.iterrows():
+    index, data = row
+    temp.append(data.tolist())
