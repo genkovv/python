@@ -6,6 +6,9 @@ import warnings
 warnings.filterwarnings('ignore') - clears all warnings
 
 ------------------------------------------------------------------------------------------------------------------------------
+Pandas options
+-------------------------------------------------------------------------------------------------------------------------------
+pd.options.display.float_format = "{:.1f}".format - List the number without "e" by allowing one number after .
 pd.options.mode.chained_assignment=None  - Stop the warning message about ""
 pd.get_option('display.max_rows')
 pd.set_option('display.max_rows', None) - clear row limit ("Warning")
