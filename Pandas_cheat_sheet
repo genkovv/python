@@ -9,6 +9,7 @@ warnings.filterwarnings('ignore') - clears all warnings
 Pandas options
 -------------------------------------------------------------------------------------------------------------------------------
 pd.options.display.float_format = "{:.1f}".format - List the number without "e" by allowing one number after .
+n=.4e10; print(f'{n:f}') - present all numbers after the 
 pd.options.mode.chained_assignment=None  - Stop the warning message about ""
 pd.get_option('display.max_rows')
 pd.set_option('display.max_rows', None) - clear row limit ("Warning")
@@ -18,7 +19,6 @@ pd.describe_option() -  offline documentation
 pd.reset_option('all') - reset all options
 ------------------------------------------------------------------------------------------------------------------------------
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
-df=pd.read_table(data,sep=|,header=None,names=user_cols) - import data where separator is "|"
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
 ------------------------------------------------------------------------------------------------------------------------------
 Expoert data to excel
@@ -82,3 +82,13 @@ temp=[]
 for row in lottopd.iterrows():
     index, data = row
     temp.append(data.tolist())
+---------------------------------------------------------------------------------------------------------------------------
+Apend series of a line in dataframe:
+
+s= pd.Series([80,2,50]),index=["column1","column2","column3"]) -  Append to df2`s columns the values in s Series.
+df2=df1.append(s, ignore_index=True)
+
+
+
+
+
