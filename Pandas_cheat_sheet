@@ -29,6 +29,7 @@ writer.save()
 ------------------------------------------------------------------------------------------------------------------------------
 Cleaning data
 ------------------------------------------------------------------------------------------------------------------------------
+dfu.isnull().sum()  -  Check which columns include Nan
 df[1].fillna(0, inplace=True)  - Replace Nan with 0
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
 
