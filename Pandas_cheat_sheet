@@ -17,6 +17,7 @@ pd.get_option('display.max_columns')
 pd.set_option('display.max_columns',None) - clear column limit
 pd.describe_option() -  offline documentation  
 pd.reset_option('all') - reset all options
+
 ------------------------------------------------------------------------------------------------------------------------------
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
@@ -33,6 +34,7 @@ dfu.isnull().sum()  -  Check which columns include Nan
 df[1].fillna(0, inplace=True)  - Replace Nan with 0
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
 df=df.astype({"column1":int64}) - change column type
+dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
