@@ -32,6 +32,7 @@ Cleaning data
 dfu.isnull().sum()  -  Check which columns include Nan
 df[1].fillna(0, inplace=True)  - Replace Nan with 0
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
+df=df.astype({"column1":int64}) - change column type
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
@@ -69,6 +70,7 @@ df[df["column-name"].str.contains("tch")]   - list all columns where string incl
 df1=df[df["body-style"].str.match("^ha.*p$")] - using regular expression
 df.row.str.extract('(?P<fips>\d{5})((?P<state>[A-Z ]*$)|(?P<county>.*?), (?P<state_code>[A-Z]{2}$))') - matches 5 dgits from column "fips"
 df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression 
+
 ------------------------------------------------------------------------------------------------------------------------------
 List:
 
