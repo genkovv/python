@@ -31,7 +31,8 @@ writer.save()
 Cleaning data
 ------------------------------------------------------------------------------------------------------------------------------
 dfu.isnull().sum()  -  Check which columns include Nan
-df[1].fillna(0, inplace=True)  - Replace Nan with 0
+dfu.isnull().values.any() - CHeck if there is at least one Nan
+df["column"].fillna(10, inplace=True)  - Replace Nan with 10
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
 df=df.astype({"column1":int64}) - change column type
 dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
