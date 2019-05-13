@@ -17,10 +17,12 @@ pd.get_option('display.max_columns')
 pd.set_option('display.max_columns',None) - clear column limit
 pd.describe_option() -  offline documentation  
 pd.reset_option('all') - reset all options
+pd.options.display.max_columns = None - List all columns
 
 ------------------------------------------------------------------------------------------------------------------------------
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
+df = pd.concat(map(pd.read_csv, glob.glob(os.path.join('', "P:\Documents\Docs\Data scientist\Hackathon2\hackathon_data-master\eli_df_hackathon*.csv")))) - import list of csv files to dataframe.
 ------------------------------------------------------------------------------------------------------------------------------
 Expoert data to excel
 ------------------------------------------------------------------------------------------------------------------------------
@@ -95,6 +97,11 @@ s= pd.Series([80,2,50]),index=["column1","column2","column3"]) -  Append to df2`
 df2=df1.append(s, ignore_index=True)
 
 
+------------------------------------------------------------------------------------------------------------------------------
+Unzip a file
 
+zip_ref = zipfile.ZipFile("P:\Documents\Docs\Data scientist\Hackathon2\hackathon_data-master.zip", 'r')
+zip_ref.extractall("P:\Documents\Docs\Data scientist\Hackathon2")
+zip_ref.close()
 
 
