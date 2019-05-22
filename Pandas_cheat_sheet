@@ -24,7 +24,7 @@ df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreads
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
 df = pd.concat(map(pd.read_csv, glob.glob(os.path.join('', "P:\Documents\Docs\Data scientist\Hackathon2\hackathon_data-master\eli_df_hackathon*.csv")))) - import list of csv files to dataframe.
 ------------------------------------------------------------------------------------------------------------------------------
-Expoert data to excel
+Export data to excel
 ------------------------------------------------------------------------------------------------------------------------------
 writer = ExcelWriter('Pandas-Example2.xlsx')
 df.to_excel(writer,'Sheet1',index=False)
@@ -41,6 +41,7 @@ dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
+
 df[["column1,column2"]]  - list two columns
 df.sort_values(by="car", ascending=True)   - Sort column "car" from A-Z
 df[["column_name"]] - list only one column 
@@ -81,6 +82,11 @@ List:
 
 df["bhp"].unique() - List unique values in a column
 list.reverse() - reversed the list
+
+------------------------------------------------------------------------------------------------------------------------------
+Select sertain columns based on data type
+------------------------------------------------------------------------------------------------------------------------------
+dfO=df.select_dtypes(include=["object"]) - It will create new dataframe based on the column types "object"
 
 ------------------------------------------------------------------------------------------------------------------------------
 Convert rows from dataset in a content in list
