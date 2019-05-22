@@ -53,6 +53,10 @@ df.columns = df.columns.str.rstrip() -
 df.rename(columns={"hp":"bhp"},inplace=True) - rename column hp to bhp
 df[df.column-name.str.contains("F[AE]LL.*BI[KC]")] - filter column based on regular expression
 ------------------------------------------------------------------------------------------------------------------------------
+Sorting:
+
+a=dataset["age"].unique(); sorted(a); print(a) - List sorted unique values.
+------------------------------------------------------------------------------------------------------------------------------
 
 df.shape - will show number of rows [0] and colums [1]
 df.info                                                      - will list the name and number of columns, number of rows  
