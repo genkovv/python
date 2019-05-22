@@ -75,13 +75,14 @@ df=df.rename({"oldname_col":"newname_col"},axis="columns") - rename column
 df[df["column-name"].str.contains("tch")]   - list all columns where string includes "tch" in column "column-name"
 df1=df[df["body-style"].str.match("^ha.*p$")] - using regular expression
 df.row.str.extract('(?P<fips>\d{5})((?P<state>[A-Z ]*$)|(?P<county>.*?), (?P<state_code>[A-Z]{2}$))') - matches 5 dgits from column "fips"
-df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression 
+df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression
 
 ------------------------------------------------------------------------------------------------------------------------------
 List:
 
 df["bhp"].unique() - List unique values in a column
 list.reverse() - reversed the list
+pd.crosstab(df['job'],[df['maritalStatus'],df['subscribed']]) - creates a table and lists all unique "job" values on y axis and "material" and subscribe status on x axis and their total count.
 
 ------------------------------------------------------------------------------------------------------------------------------
 Select sertain columns based on data type
