@@ -64,6 +64,7 @@ df.shape - will show number of rows [0] and colums [1]
 df.info                                                      - will list the name and number of columns, number of rows  
 df = df.reset_index() - re-create the index after small dataframe is cut from large
 del df['index']      - delete column "index"
+df.drop('column_name', axis=1, inplace=True) - delete / drop column name
 ------------------------------------------------------------------------------------------------------------------------------
 Change values:
 
