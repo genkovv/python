@@ -38,6 +38,8 @@ df["column"].fillna(10, inplace=True)  - Replace Nan with 10
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
 df=df.astype({"column1":int64}) - change column type
 dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
+df=df.dropna() - remove all rows where a cell value and requires to reset the index
+df.reset_index(inplace=True)
 
 ------------------------------------------------------------------------------------------------------------------------------
 Columns:
