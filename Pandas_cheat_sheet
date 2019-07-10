@@ -42,6 +42,12 @@ df=df.dropna() - remove all rows where a cell value and requires to reset the in
 df.reset_index(inplace=True)
 
 ------------------------------------------------------------------------------------------------------------------------------
+ Create new dataframe from two series where the indexes are identical and lenth
+ 
+ matchdf=pd.DataFrame({'y_predicted':y_pred.values, 'y_test':y_test.values})
+
+------------------------------------------------------------------------------------------------------------------------------
+
 Columns:
 
 df[["column1,column2"]]  - list two columns
