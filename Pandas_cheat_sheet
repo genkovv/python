@@ -2,6 +2,12 @@ import pandas as pd
 import numpy as np
 from pandas import ExcelWriter
 from pandas import ExcelFile
+import os
+import glob
+import pandas as pd
+import seaborn as sns
+import gc
+import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore') - clears all warnings
 
@@ -124,4 +130,9 @@ zip_ref = zipfile.ZipFile("P:\Documents\Docs\Data scientist\Hackathon2\hackathon
 zip_ref.extractall("P:\Documents\Docs\Data scientist\Hackathon2")
 zip_ref.close()
 
+------------------------------------------------------------------------------------------------------------------------------
+Visualisation:
+
+plt.ticklabel_format(style='plain', axis='y') - Change exponential presentation of numbers to standard values. 
+sns.set(rc={'figure.figsize':(14,12)}) - Change the graph size
 
