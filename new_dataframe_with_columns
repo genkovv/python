@@ -1,0 +1,33 @@
+#for i in range(0, track_id.shape[0]):
+columns = ['track_id',
+           "track_name",
+           "artist_name",
+           "average_track_rank",
+           "total_track_rank",
+           "num_charts",
+           "mean_track_metric_value",
+           "total_track_metric_value"
+           ]
+
+rows=[]
+for i in range(0, track_id.shape[0]):
+    n=i/100
+    if float(n).is_integer() ==True:
+        print("Track ID:",track_id[i], "     ID num:",i)
+    #print("This is the track ID",track_id[i],"ID num",i)
+    tempdf=hdf[hdf["track_id"]==track_id[i]]
+    tempdf.reset_index(inplace=True)
+    del tempdf["index"]
+    track_name=tempdf.iloc[0,5]
+    artist_name=tempdf.iloc[0,7]
+    average_track_rank=round(tempdf["track_rank"].mean())
+    total_track_rank=tempdf["track_rank"].sum()
+    num_charts=tempdf.shape[0]
+    mean_track_metric_value=round(tempdf["track_metric_value"].mean())
+    total_track_metric_value=tempdf["track_metric_value"].sum()
+    
+    
+    row=[track_id[i], track_name, artist_name, average_track_rank, total_track_rank, num_charts, mean_track_metric_value, total_track_metric_value]
+    rows.append(row)
+#newdf=pd.DataFrame(rows,columns)
+newdf = pd.DataFrame(rows,columns = columns)
