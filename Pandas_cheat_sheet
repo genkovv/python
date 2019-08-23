@@ -46,6 +46,7 @@ df=df.astype({"column1":int64}) - change column type
 dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
 df=df.dropna() - remove all rows where a cell value and requires to reset the index
 df.reset_index(inplace=True)
+newtext=re.search("\/.*",text).group(0)  - Use regular expression to get portion of the string and assign it to a new text
 
 ------------------------------------------------------------------------------------------------------------------------------
  Create new dataframe from two series where the indexes are identical and lenth
