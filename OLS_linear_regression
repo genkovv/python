@@ -47,4 +47,4 @@ Cond. No	A test for multicollinearity (if in a fit with multiple parameters, the
 
 As a final note, if you don't want to include a constant term in your model, you can exclude it using the minus operator.
 
- 
+ test
