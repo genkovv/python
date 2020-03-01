@@ -101,7 +101,7 @@ df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression
 
 Groupby
 
-df.groupby(['col1','col2']).agg({'col3':'sum','col4':'sum'}).reset_index()   - group by col1 and col2 and sum by col4 and col
+df.groupby(['col1','col2']).agg({'col3':'sum','col4':'sum'}).reset_index()   - group by col1 and col2 and sum by col4 and col4
 
 ------------------------------------------------------------------------------------------------------------------------------
 
