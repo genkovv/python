@@ -60,7 +60,7 @@ Columns:
 df[["column1,column2"]]  - list two columns
 df.sort_values(by="car", ascending=True)   - Sort column "car" from A-Z
 df[["column_name"]] - list only one column 
-df.rename(columns={"A":"a"}) - renames columns "A" with "a"
+df.rename(columns={"A":"a"},inplace=True) - renames columns "A" with "a"
 df["column"] = df["column"].replace(r"\ ","",regex=True)     - remove spaces in columns
 df.column-name = df.column-name.str.replace(' ', '')     - 
 df.columns = df.columns.str.lstrip() -  To remove white space at the beginning of string
@@ -143,5 +143,7 @@ Visualisation:
 
 plt.ticklabel_format(style='plain', axis='y') - Change exponential presentation of numbers to standard values. 
 sns.set(rc={'figure.figsize':(14,12)}) - Change the graph size
-
+df.plot(x="col1", y="col2",kind="bar",color = 'g',figsize=(20,7),fontsize=16,legend="full") - Create barchart 
+plt.xticks(rotation=0) - Rotate the x axis legend horizontaly 
+plt.ticklabel_format(style='plain', axis='y')  - make y axis show full numbers
 
