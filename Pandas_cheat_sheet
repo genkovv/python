@@ -146,4 +146,5 @@ sns.set(rc={'figure.figsize':(14,12)}) - Change the graph size
 df.plot(x="col1", y="col2",kind="bar",color = 'g',figsize=(20,7),fontsize=16,legend="full") - Create barchart 
 plt.xticks(rotation=0) - Rotate the x axis legend horizontaly 
 plt.ticklabel_format(style='plain', axis='y')  - make y axis show full numbers
+plt.legend(loc=1, prop={'size': 14}) - plot legend size and location
 
