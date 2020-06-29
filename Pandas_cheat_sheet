@@ -7,7 +7,6 @@ import glob
 import pandas as pd
 import seaborn as sns
 import gc
-import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings('ignore') - clears all warnings
 
@@ -67,6 +66,7 @@ df.columns = df.columns.str.lstrip() -  To remove white space at the beginning o
 df.columns = df.columns.str.rstrip() - 
 df.rename(columns={"hp":"bhp"},inplace=True) - rename column hp to bhp
 df[df.column-name.str.contains("F[AE]LL.*BI[KC]")] - filter column based on regular expression
+df[(df["column1"]=="string1") & (df["column5"]=="string2")] - Filter the dataframe for specific strings in two columns.
 ------------------------------------------------------------------------------------------------------------------------------
 Sorting:
 
