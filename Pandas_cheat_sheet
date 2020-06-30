@@ -102,6 +102,9 @@ df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression
 Groupby
 
 df.groupby(['col1','col2']).agg({'col3':'sum','col4':'sum'}).reset_index()   - group by col1 and col2 and sum by col4 and col4
+df.groupby(['col1', 'col2']).size() -  row counts
+df[["col1","col2","col3"]].groupby(["col1"]).agg({"col3":"max"}).reset_index() - List all three columns where values in col1 are grouped and identified the max value in col3
+
 
 ------------------------------------------------------------------------------------------------------------------------------
 
