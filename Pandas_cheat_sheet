@@ -48,6 +48,13 @@ df.reset_index(inplace=True)
 newtext=re.search("\/.*",text).group(0)  - Use regular expression to get portion of the string and assign it to a new text
 
 ------------------------------------------------------------------------------------------------------------------------------
+Sorting values in df column,reset index
+
+df1=df1.sort_values(by="col1",ascending=False)
+df.reset_index(inplace=True)
+del df["index"]
+
+------------------------------------------------------------------------------------------------------------------------------
  Create new dataframe from two series where the indexes are identical and lenth
  
  matchdf=pd.DataFrame({'y_predicted':y_pred.values, 'y_test':y_test.values})
@@ -108,7 +115,7 @@ Groupby
 df.groupby(['col1','col2']).agg({'col3':'sum','col4':'sum'}).reset_index()   - group by col1 and col2 and sum by col4 and col4
 df.groupby(['col1', 'col2']).size() -  row counts
 df[["col1","col2","col3"]].groupby(["col1"]).agg({"col3":"max"}).reset_index() - List all three columns where values in col1 are grouped and identified the max value in col3
-
+df.groupby(["col1"]).size().reset_index(name="new_col_name") - Groupby col1 by counting the numbers of times each value is listed in a new column (new_col_name) - Output dataframe
 
 ------------------------------------------------------------------------------------------------------------------------------
 
@@ -117,7 +124,6 @@ List:
 df["bhp"].unique() - List unique values in a column
 list.reverse() - reversed the list
 pd.crosstab(df['job'],[df['maritalStatus'],df['subscribed']]) - creates a table and lists all unique "job" values on y axis and "material" and subscribe status on x axis and their total count.
-df.groupby(["col1"]).size().reset_index(name="new_col_name") - Groupby col1 by counting the numbers in a new column (new_col_name)
 df.sort_values(by="col2",ascending=False) - sort numbers descending by col2
 
 ------------------------------------------------------------------------------------------------------------------------------
