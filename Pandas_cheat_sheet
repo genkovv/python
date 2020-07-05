@@ -113,6 +113,8 @@ List:
 df["bhp"].unique() - List unique values in a column
 list.reverse() - reversed the list
 pd.crosstab(df['job'],[df['maritalStatus'],df['subscribed']]) - creates a table and lists all unique "job" values on y axis and "material" and subscribe status on x axis and their total count.
+df.groupby(["col1"]).size().reset_index(name="new_col_name") - Groupby col1 by counting the numbers in a new column (new_col_name)
+df.sort_values(by="col2",ascending=False) - sort numbers descending by col2
 
 ------------------------------------------------------------------------------------------------------------------------------
 Select sertain columns based on data type
