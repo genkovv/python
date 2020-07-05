@@ -90,13 +90,17 @@ df[(df['column1'] > 100) & (df["column2"]<=10)]          - List all columns wher
 df["column1"]=df["column1"].replace(["?"],"NA")  - replaces string "?" with NA in column "column1"
 df1=df.iloc[0:10]  - creating new df1 with all columns and 10 rows
 df1=df.iloc[0:10,0:10]  - creating new df1 with all columns and 10 rows
-df3=pd.merge(df1,df2[["col-name","colname5","colname7"]],on="col-name",how="left")  - VLOOKUP equivalent (column) both df need to have identical "col-name" column
 df=df.rename({"oldname_col":"newname_col"},axis="columns") - rename column 
 df[df["column-name"].str.contains("tch")]   - list all columns where string includes "tch" in column "column-name"
 df1=df[df["body-style"].str.match("^ha.*p$")] - using regular expression
 df.row.str.extract('(?P<fips>\d{5})((?P<state>[A-Z ]*$)|(?P<county>.*?), (?P<state_code>[A-Z]{2}$))') - matches 5 dgits from column "fips"
 df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression
 
+------------------------------------------------------------------------------------------------------------------------------
+SQL like:
+
+pd.merge(df1, df2, on=["col1","col2"], how='inner') -  Merge identical values on two columns (col1 and col2) between two DFs and add third col (col3) from one of the DFs
+df3=pd.merge(df1,df2[["col-name","colname5","colname7"]],on="col-name",how="left")  - VLOOKUP equivalent (column) both df need to have identical "col-name" column
 ------------------------------------------------------------------------------------------------------------------------------
 
 Groupby
