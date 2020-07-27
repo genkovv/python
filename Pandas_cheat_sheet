@@ -37,6 +37,7 @@ writer.save()
 ------------------------------------------------------------------------------------------------------------------------------
 Cleaning data
 ------------------------------------------------------------------------------------------------------------------------------
+df.fillna(0,inplace=True)  - replace all Nan with 0
 dfu.isnull().sum()  -  Check which columns include Nan
 dfu.isnull().values.any() - CHeck if there is at least one Nan
 df["column"].fillna(10, inplace=True)  - Replace Nan with 10
