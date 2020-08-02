@@ -44,7 +44,8 @@ df["column"].fillna(10, inplace=True)  - Replace Nan with 10
 df.apply(axis=0, func=lambda x : any(pd.isnull(x)))   - Check if a column has null value
 df=df.astype({"column1":int64}) - change column type
 dbf=json_normalize(dfa["column1"])   - cnvert json column to pandas dataframe
-df=df.dropna() - remove all rows where a cell value and requires to reset the index
+df=df.dropna() - remove all rows where a cell value and requires to the index
+df=df[df["column"]!=0] - remove rows where in a spacific column the values are. Ie keep the rows where values in the "column" are not 0.
 df.reset_index(inplace=True)
 newtext=re.search("\/.*",text).group(0)  - Use regular expression to get portion of the string and assign it to a new text
 
