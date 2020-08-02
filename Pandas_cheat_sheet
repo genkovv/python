@@ -77,6 +77,10 @@ df.rename(columns={"hp":"bhp"},inplace=True) - rename column hp to bhp
 df[df.column-name.str.contains("F[AE]LL.*BI[KC]")] - filter column based on regular expression
 df[(df["column1"]=="string1") & (df["column5"]=="string2")] - Filter the dataframe for specific strings in two columns.
 df["new column"]=df[["col1","col2","col3"]].sum(axis=1) - It will summarize the values of each row for the three columns (col1, col2, col3) and write the output in a new column
+df=df.replace(regex=[r"\n"], value='') - replace in all columns and cells the string "\n" with nothing
+df['column1'] = df['column1'].str.split(',').str[0] - Splint the string into multiple in all cells with a separator comma and take first string.
+
+
 ------------------------------------------------------------------------------------------------------------------------------
 Sorting:
 
