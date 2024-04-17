@@ -25,6 +25,7 @@ pd.reset_option('all') - reset all options
 pd.options.display.max_columns = None - List all columns
 
 ------------------------------------------------------------------------------------------------------------------------------
+newdf=df.copy()  - copy original dataframe data from df to newdf
 df=pd.read_excel(C/path/to/file.xlsx",sheet_name"Sheet1") - Import excel spreadshet`s Sheet1
 df = pd.read_csv("bad-file.csv", error_bad_lines=False)  - Ignore bad lines
 df = pd.concat(map(pd.read_csv, glob.glob(os.path.join('', "P:\Documents\Docs\Data scientist\Hackathon2\hackathon_data-master\eli_df_hackathon*.csv")))) - import list of csv files to dataframe.
