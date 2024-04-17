@@ -111,7 +111,9 @@ df[df["column-name"].str.contains("tch")]   - list all columns where string incl
 df1=df[df["body-style"].str.match("^ha.*p$")] - using regular expression
 df.row.str.extract('(?P<fips>\d{5})((?P<state>[A-Z ]*$)|(?P<county>.*?), (?P<state_code>[A-Z]{2}$))') - matches 5 dgits from column "fips"
 df["brand"].str.extract("([A-Z][a-z].*)") - capture with regular expression
-
+df["column2"]= df["column1"].str.extract(r'\((.*?)\)') - extract the text within pharenteses from column 1 to a new column 2
+df["column2"] = "("+ df["column2"] +")"
+ 
 ------------------------------------------------------------------------------------------------------------------------------
 SQL like:
 
