@@ -1,1 +1,4 @@
 
+
+
+print(json.dumps(json_data,indent=4))   - Convert json into readable structured content
